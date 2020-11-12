@@ -12,6 +12,7 @@
 	--fw-bold: 700;
 
 	--clr-light: #fef7fa;
+	--clr-mid: #eedcb8;
 	--clr-dark: #040101;
 	--clr-accent: #009db3;
 }
@@ -31,6 +32,11 @@ h2 {
 	margin: 0;
 }
 
+.contain {
+	max-width: 1440px;
+	padding: clamp(2em, 2vw, 5em);
+}
+
 header {
 	background-image: url("../images/summerandpharaoh.jpg");
 	background-size: cover;
@@ -44,8 +50,6 @@ header {
 	flex-direction: column;
 	justify-content: space-between;
 	margin: auto;
-	max-width: 1440px;
-	padding-left: clamp(1em, 2vw, 5em);
 }
 
 .nav {
@@ -77,10 +81,18 @@ header {
 	text-transform: uppercase;
 	/* font-size: 2.75rem; */
 	font-size: clamp(2.75rem, 5vw, 4.5rem);
-	max-width: 630px;
+	/* max-width: 630px; */
 	margin-bottom: 0.25em;
 }
 
+.intro_title span {
+	display: block;
+}
+
 #training {
-	background-color: var(--clr-dark);
+	background-color: var(--clr-mid);
+}
+
+.title {
+	font-size: 2rem;
 }
