@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--ff-primary: "Source Sans Pro", sans-serif;
+	--ff-secondary: "Source Code Pro", monospace;
+
+	--fw-normal: 400;
+	--fw-bold: 700;
+
+	--clr-light: #fef7fa;
+	--clr-dark: #040101;
+	--clr-accent: #009db3;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2 {
+	line-height: 1.2;
+	margin: 0;
+}
+
+header {
+	background-image: url("../images/summerandpharaoh.jpg");
+	background-size: cover;
+	background-position: right 35% top;
+	height: 100vh;
+}
+
+.header_content {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: auto;
+	max-width: 1440px;
+	padding-left: clamp(1em, 2vw, 5em);
+}
+
+.nav {
+	padding: 1.5em 0;
+}
+
+.nav__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+.nav__list a {
+	color: var(--clr-dark);
+	text-decoration: none;
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	text-transform: uppercase;
+	padding: 1em;
+}
+
+.nav__list a:hover,
+.nav__list a:focus {
+}
+
+.intro_title {
+	color: var(--clr-light);
+	text-transform: uppercase;
+	/* font-size: 2.75rem; */
+	font-size: clamp(2.75rem, 5vw, 4.5rem);
+	max-width: 630px;
+	margin-bottom: 0.25em;
+}
+
+#training {
+	background-color: var(--clr-dark);
+}
