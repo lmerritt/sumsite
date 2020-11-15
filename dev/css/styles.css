@@ -37,6 +37,13 @@ h2 {
 	padding: 0 clamp(2em, 2vw, 5em);
 }
 
+#lessons,
+#training,
+#about {
+	background-color: var(--clr-mid);
+	padding: 5em 0;
+}
+
 header {
 	background-image: url("../images/summerandpharaoh.jpg");
 	background-size: cover;
@@ -52,27 +59,39 @@ header {
 }
 
 .nav {
-	padding: 1.5em 0;
+	position: fixed;
+	background: var(--clr-dark);
+	color: var(--clr-light);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	transform: translateX(100%);
+	transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 .nav__list {
-	margin: 0;
-	padding: 0;
 	list-style: none;
 	display: flex;
-	justify-content: center;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 
-.nav__list a {
-	color: var(--clr-dark);
-	text-decoration: none;
-	font-size: clamp(1rem, 2vw, 1.2rem);
+.nav__link {
+	color: inherit;
 	text-transform: uppercase;
-	padding: 1em;
+	font-size: clamp(1rem, 2vw, 2rem);
+	text-decoration: none;
 }
 
-.nav__list a:hover,
-.nav__list a:focus {
+.nav__link:hover,
+.nav__link:focus {
+	color: var(--clr-accent);
 }
 
 .intro_title {
