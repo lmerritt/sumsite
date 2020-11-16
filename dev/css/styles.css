@@ -34,6 +34,7 @@ h2 {
 
 .contain {
 	max-width: 1440px;
+	margin: 0 auto;
 	padding: 0 clamp(1em, 2vw, 5em);
 }
 
@@ -107,6 +108,12 @@ header {
 	z-index: 1000;
 }
 
+.nav-open .hamburger,
+.nav-open .hamburger::before,
+.nav-open .hamburger::after {
+	background: var(--clr-accent);
+}
+
 .hamburger {
 	display: block;
 	position: relative;
@@ -119,7 +126,7 @@ header {
 	width: 2.75em;
 	height: 3px;
 	border-radius: 1em;
-	transition: transform 250ms ease-in-out;
+	transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
 
 .hamburger::before,
@@ -136,6 +143,26 @@ header {
 
 .hamburger::after {
 	bottom: 6px;
+}
+
+.nav-open .nav {
+	transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+	position: fixed;
+}
+
+.nav-open .hamburger {
+	transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+	opacity: 0;
+}
+
+.nav-open .hamburger::after {
+	transform: rotate(90deg) translate(6px);
 }
 
 /* Intro */
